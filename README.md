@@ -12,7 +12,7 @@ This project implements **GPT2-124M** from scratch and trains it  using distribu
 Cloud usage
 
 ![Results Overview](images/cloud_usage.png)
----
+
 
 ## Repository Structure
 
@@ -32,7 +32,7 @@ Cloud usage
 └── README.md                    # Project documentation 
 
 ```
----
+
 
 ## Results
 
