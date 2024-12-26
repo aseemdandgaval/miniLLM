@@ -41,6 +41,18 @@ After training for 10B tokens, this model achieved lower validation loss and hig
 
 ![Results Overview](images/results.png)
 
+Final Training steps and Metrics:
+
+```
+step 19067 | loss: 3.103271 | lr 6.0000e-05 | norm: 0.2596 | dt: 555.33ms | tok/sec: 944104.07
+step 19068 | loss: 3.186379 | lr 6.0000e-05 | norm: 0.2834 | dt: 556.82ms | tok/sec: 941571.89
+step 19069 | loss: 3.118728 | lr 6.0000e-05 | norm: 0.2621 | dt: 556.35ms | tok/sec: 942368.40
+step 19070 | loss: 3.121482 | lr 6.0000e-05 | norm: 0.2625 | dt: 556.40ms | tok/sec: 942278.35
+step 19071 | loss: 3.138492 | lr 6.0000e-05 | norm: 0.2628 | dt: 556.23ms | tok/sec: 942578.85
+
+validation loss: 3.1078
+HellaSwag accuracy: 2982/10042=0.2970
+```
 
 Before any training:
 
