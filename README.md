@@ -18,17 +18,18 @@ Cloud usage
 
 ```
 .
+├── gpt_train.py                 # Script to train the model 
+├── utils.py                     # Utility functions used in training
+├── model.py                     # GPT2-124M model definition
+│                  
 ├── images/
-│   ├──results.png               # Training parameters (e.g., batch size, LR, etc.)
+│   ├──results.png               
+│   ├──cloud_usage.png
 ├── eval/
 │   ├── hellaswag.py             # Functions for running the HellaSwag eval
 ├── data/
 │   └── dataset.py               # DataLoader definition
 │   └── fineweb.py               # Download and shard the FineWebEdu-10B dataset 
-├── src/
-│   ├── gpt_train.py             # Script to train the model 
-│   ├── model.py                 # GPT-2 model definition
-│   ├── utils.py                 # Utility functions used in training
 └── README.md                    # Project documentation 
 
 ```

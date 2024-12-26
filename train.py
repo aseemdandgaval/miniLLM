@@ -11,15 +11,15 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.distributed import init_process_group, destroy_process_group
 
 from model import GPT, GPTConfig
-from dataset import DataLoaderDDP
+from data.dataset import DataLoaderDDP
 from utils import get_lr, get_most_likely_row
-from hellaswag import render_example, iterate_examples
+from eval.hellaswag import render_example, iterate_examples
 
 import torch._dynamo
 torch._dynamo.config.suppress_errors = True
 
-# Simple launch: python gpt_train.py
-# DDP launch for e.g. 8 GPUs: torchrun --standalone --nproc_per_node=8 gpt_train.py
+# Simple launch: python train.py
+# DDP launch for e.g. 8 GPUs: torchrun --standalone --nproc_per_node=8 train.py
 
 # Pytorch DDP ================================================================================================================
 
