@@ -13,12 +13,16 @@ Cloud usage
 
 ![Results Overview](images/cloud_usage.png)
 
+## Try it yourself
+Try the gradio app to compare a trained and untrained GPT2 model [here](https://huggingface.co/spaces/AseemD/gpt2). 
+
+![Results Overview](images/gradio_app.png)
 
 ## Repository Structure
 
 ```
 .
-├── gpt_train.py                 # Script to train the model 
+├── train.py                     # Script to train the model 
 ├── utils.py                     # Utility functions used in training
 ├── model.py                     # GPT2-124M model definition
 ├── app.py                       # Gradio app                 
