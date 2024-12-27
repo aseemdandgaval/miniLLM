@@ -34,10 +34,10 @@ Try the gradio app to compare a trained and untrained GPT2 model [here](https://
 ├── images/
 │   ├──results.png               
 │   ├──cloud_usage.png
+│   ├──gradio-app.png
 └── README.md                    # Project documentation 
 
 ```
-
 
 ## Results
 
@@ -79,7 +79,7 @@ And after 10 Billion tokens of training:
 ```
 
 ## Acknowledgments
-This project was made following the ![Lets reproduce GPT-124M]("https://www.youtube.com/watch?v=l8pRSuU81PU&t=11363s) tutorial on youtube and the ![build-nanoogpt](https://github.com/karpathy/build-nanogpt) repo.
+This project was made following the ![Lets reproduce GPT-124M]("https://www.youtube.com/watch?v=l8pRSuU81PU&t=11363s) tutorial on youtube and the ![build-nanogpt](https://github.com/karpathy/build-nanogpt) repo.
 
 ## License
 This project is licensed under the MIT License.
