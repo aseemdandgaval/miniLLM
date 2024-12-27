@@ -3,7 +3,6 @@ import tiktoken
 import gradio as gr
 from model import GPT, GPTConfig
 from torch.nn import functional as F
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 # Set device
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -32,24 +31,15 @@ def generate_text(input, model, num_sequences, max_length):
 
     sentences = []
     while x.size(1) < max_length:
-        # forward the model to get the logits
         with torch.no_grad():
-            logits, loss = model(x) # (B, T, vocab_size)
-            # take the logits at the last position
-            logits = logits[:, -1, :] # (B, vocab_size)
-            # get the probabilities
+            logits, loss = model(x)
+            logits = logits[:, -1, :] 
             probs = F.softmax(logits, dim=-1)
-            # do top-k sampling of 50 (huggingface pipeline default)
-            # topk_probs here becomes (5, 50), topk_indices is (5, 50)
             topk_probs, topk_indices = torch.topk(probs, 50, dim=-1)
-            # select a token from the top-k probabilities
-            # note: multinomial does not demand the input to sum to 1
-            ix = torch.multinomial(topk_probs, 1) # (B, 1)
-            # gather the corresponding indices
-            xcol = torch.gather(topk_indices, -1, ix) # (B, 1)
-            # append to the sequence
+            ix = torch.multinomial(topk_probs, 1) 
+            xcol = torch.gather(topk_indices, -1, ix) 
             x = torch.cat((x, xcol), dim=1)
-    # print the generated text
+
     for i in range(num_sequences):
         tokens = x[i, :max_length].tolist()
         decoded = TOKENIZER.decode(tokens)
@@ -60,11 +50,9 @@ def generate_text(input, model, num_sequences, max_length):
 
 def gradio_fn(prompt, num_sequences=1, max_length=30):
     """Generate text using both models."""
-    # Generate text using untrained model
     untrained_texts = generate_text(prompt, UNTRAINED_MODEL, num_sequences, max_length)
     untrained_output = "\n\n".join(f"> {s}" for s in untrained_texts)
 
-    # Generate text using fine-tuned model
     trained_texts = generate_text(prompt, TRAINED_MODEL, num_sequences, max_length)
     trained_output = "\n\n".join(f"> {s}" for s in trained_texts)
 

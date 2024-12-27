@@ -21,15 +21,15 @@ Cloud usage
 ├── gpt_train.py                 # Script to train the model 
 ├── utils.py                     # Utility functions used in training
 ├── model.py                     # GPT2-124M model definition
-│                  
-├── images/
-│   ├──results.png               
-│   ├──cloud_usage.png
+├── app.py                       # Gradio app                 
 ├── eval/
 │   ├── hellaswag.py             # Functions for running the HellaSwag eval
 ├── data/
 │   └── dataset.py               # DataLoader definition
 │   └── fineweb.py               # Download and shard the FineWebEdu-10B dataset 
+├── images/
+│   ├──results.png               
+│   ├──cloud_usage.png
 └── README.md                    # Project documentation 
 
 ```
