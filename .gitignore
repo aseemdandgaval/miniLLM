@@ -1,5 +1,6 @@
 log/model_19072.pt
 gpt2
 viz.ipynb
-C:/Users/aseem/Downloads/Deep Learning/miniLLM/__pycache__
-C:/Users/aseem/Downloads/Deep Learning/miniLLM/.gradio
+__pycache__/
+.gradio/
+app2.py
