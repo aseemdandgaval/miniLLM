@@ -16,7 +16,7 @@ Cloud usage
 ## Try it yourself
 Try the gradio app to compare a trained and untrained GPT2 model [here](https://huggingface.co/spaces/AseemD/gpt2). 
 
-![Results Overview](images/gradio_app.png)
+![Results Overview](images/app_demo.gif)
 
 ## Repository Structure
 
