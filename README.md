@@ -21,18 +21,16 @@ Try the gradio app to compare a trained and untrained GPT2 model [here](https://
 ## Repository Structure
 
 ```
-.               
+.
+├── images/
+│   ├──...           
+|          
 ├── eval/
 │   ├── hellaswag.py             # Functions for running the HellaSwag eval
 |
 ├── data/
 │   └── dataset.py               # DataLoader definition
 │   └── fineweb.py               # Download and shard the FineWebEdu-10B dataset
-|
-├── images/
-│   ├──results.png               
-│   ├──cloud_usage.png
-│   ├──gradio-app.png
 |
 ├── train.py                     # Script to train the model 
 ├── utils.py                     # Utility functions used in training
